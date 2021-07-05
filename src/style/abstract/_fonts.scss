@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('src/assets/fonts/DS-Digital.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DS-Digital-Italic';
+  src: url('src/assets/fonts/DS-Digital-Italic.woff2') format('woff2');
+}
+
+:root {
+  font-size: 16px;
+  font-family: 'DS-Digital';
+}
+
+$f-12: 12px;
+$f-16: 16px;
+$f-18: 18px;
+$f-24: 24px;
+$f-32: 32px;
+$f-48: 48px;
+$f-64: 64px;

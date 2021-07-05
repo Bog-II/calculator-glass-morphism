@@ -1,0 +1,45 @@
+@use '../abstract/abstract' as *;
+
+$margin1: min(2%, 1rem);
+
+#calculator {
+  width: 500px;
+  height: auto;
+  background-color: #ffc6d4;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: $margin1;
+}
+
+#output-screen {
+  height: 100px;
+}
+
+#key-layout {
+  height: 100%;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #ffe6c6;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  div {
+    padding: 10% 20% 10% 20%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: $f-48;
+  }
+
+  div:hover {
+    background-color: #d8fdb9;
+  }
+
+  div:active {
+    background-color: #b9f8fd;
+  }
+}
