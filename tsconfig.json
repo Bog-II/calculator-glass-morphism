@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
+    "lib": ["ESNext", "DOM", "es5", "es6", "dom.iterable"],
     "moduleResolution": "Node",
     "strict": true,
     "sourceMap": true,

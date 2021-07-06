@@ -13,9 +13,12 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100%;
+  background-color: $bg-color;
 
-  color: $bg-color-dark;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(162, 73%, 26%) 0,
+      transparent 20%
+    ),
+    radial-gradient(at 82% 65%, hsl(198, 62%, 36%) 0, transparent 20%);
 }
-
-
-

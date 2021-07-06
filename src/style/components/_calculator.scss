@@ -3,43 +3,121 @@
 $margin1: min(2%, 1rem);
 
 #calculator {
+  display: flex;
+  flex-direction: column;
+  font-family: 'DS-Digital';
   width: 500px;
-  height: auto;
-  background-color: #ffc6d4;
+  height: 500px;
+
   overflow: hidden;
   border-radius: 16px;
   margin: $margin1;
+
+  border-radius: 12px;
+
+  // Dark
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+
+  // Light
+  // border: 1px solid rgba(0, 0, 0, 0.16);
+  // color: #000;
 }
 
 #output-screen {
-  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 20%;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0 5% 0 5%;
+
+  // backdrop-filter: blur(20px);
+  backdrop-filter: blur(16px);
+
+  // Dark
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  background-color: rgba(0, 0, 0, 0.32);
+
+  // Light
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  // background-color: rgba(255, 255, 255, 0.13);
+
+  span#output {
+    font-size: $f-64;
+  }
 }
 
 #key-layout {
-  height: 100%;
-  width: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background-color: #ffe6c6;
+  grid-template-rows: repeat(5, 1fr);
+  height: 100%;
 
-  border-radius: 16px;
+  user-select: none;
   overflow: hidden;
 
-  div {
-    padding: 10% 20% 10% 20%;
+  span {
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: $f-48;
+
+    backdrop-filter: blur(8px);
+
+    // Light
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+    // border-right: 1px solid rgba(0, 0, 0, 0.16);
+    // background-color: rgba(255, 255, 255, 0.16);
+
+    // Dark
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+    background-color: rgba(0, 0, 0, 0.16);
   }
 
-  div:hover {
-    background-color: #d8fdb9;
+  span.important-key {
+    background-color: rgba(37, 248, 255, 0.16);
   }
 
-  div:active {
-    background-color: #b9f8fd;
+  span.important-key:hover {
+    background-color: rgba(37, 248, 255, 0.24);
   }
+
+  span:hover {
+    backdrop-filter: blur(16px);
+
+    // Dark
+    // background-color: rgba(255, 255, 255, 0.12);
+
+    // Light
+    background-color: rgba(122, 51, 51, 0.16);
+
+    transition: all 160ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  span:active,
+  span.important-key:active {
+    color: #000;
+    background-color: #25f8ff;
+
+    #backspace {
+      filter: invert(0);
+    }
+
+    transition: all 350ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  span.no-right-border {
+    border-right: 0px solid transparent;
+  }
+
+  span.no-bottom-border {
+    border-bottom: 0px solid transparent;
+  }
+}
+
+#backspace {
+  filter: invert(1);
 }

@@ -1,3 +1,5 @@
+@use './colors' as *;
+
 @font-face {
   font-family: 'DS-Digital';
   src: url('src/assets/fonts/DS-Digital.woff2') format('woff2');
@@ -9,8 +11,9 @@
 }
 
 :root {
-  font-size: 16px;
   font-family: 'DS-Digital';
+  font-size: 16px;
+  color: #000;
 }
 
 $f-12: 12px;

@@ -10,8 +10,11 @@
   --purple: #a82dd1;
   --yellow: #fff565;
 
-  --bg: #000;
+  --bg-dark: #000;
+
   --border-color: #fff;
+  --font-color: #fff;
 }
 
-$bg-color-dark: var(--bg);
+$font-color: var(--font-color);
+$bg-color: var(--bg-dark);
