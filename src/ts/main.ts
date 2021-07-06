@@ -127,35 +127,6 @@ const handleClickDigitOrOperator = (e: Event): void => {
           }
           break;
       }
-
-      // if (value === '.') {
-      //   valid = !isDecimal && outputLength != 0;
-      //   if (valid) {
-      //     isDecimal = true;
-      //   }
-      // } else {
-      //   if (value === '(') {
-      //     valid = operatorsAndOpenParenthese.has(lastChar) || lastChar === ')';
-      //     if (valid) {
-      //       openedParenthesis++;
-      //     }
-      //   } else {
-      //     const currValueIsCloseParenthesis = value === ')';
-      //     if (operators.has(value) || currValueIsCloseParenthesis) {
-      //       valid = !operators.has(lastChar);
-      //       if (valid) {
-      //         if (currValueIsCloseParenthesis) {
-      //           valid = openedParenthesis > 0;
-      //           if (valid) {
-      //             openedParenthesis--;
-      //           }
-      //         } else {
-      //           valid = lastChar != '(';
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
     }
 
     if (valid) {
